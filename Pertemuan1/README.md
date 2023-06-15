@@ -28,6 +28,6 @@ D. LANGKAH PERCOBAAN
 E. HASIL PERCOBAAN
 Buat hasil analisis pengamatan flip flop dalam bentuk laporan singkat
 
-F.EVALUASI
+F. EVALUASI
 Modifikasi coding dengan membuat flip flop berdasarkan gerbang logika AND, OR, XOR, dengan
 menyertakan pseudocode algoritma
