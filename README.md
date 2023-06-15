@@ -2,7 +2,7 @@
 # Modul Praktikum SISTEM OTOMASI
 
 
-# Sekenario pelaksanaan praktikum
+## Sekenario pelaksanaan praktikum
 1. Praktikum dilaksanakan di laboratorium Teknik Informatika UMPO.
 2. Praktikum dilaksanakan sesuai jadwal yang telah ditentukan oleh laboratorium
 Teknik Informatika UMPO dengan durasi seperti yang tertera dalam jadwal.
