@@ -46,5 +46,6 @@ Pemperdalam materi praktikum sistem otomasi dengan menggunakan NodeMCU ESP8266 a
 
 
 ## Lisensi
-Proyek ini dilisensikan di bawah [PRODI TEKNIK INFORMATIKA FAKULTAS TEKNIK UNIVERSITAS MUHAMMADIYAH PONOROGO](www.umpo.ac.id)(kassandra.my.id).
+Proyek ini dilisensikan di bawah [PRODI TEKNIK INFORMATIKA FAKULTAS TEKNIK UNIVERSITAS MUHAMMADIYAH PONOROGO](www.umpo.ac.id).
+[Kassandra Production](kassandra.my.id).
 ©2023
