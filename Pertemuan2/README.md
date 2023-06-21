@@ -65,8 +65,9 @@ antara sisi satu dengan sisi yang lain, misalnya dengan dilatasi antar
 4. Sambungkan pin trig pada modul sensor ultrasonik ke pin D1 pada NodeMcu ESP8266
 5. Sambungkan pin echo pada modul sensor ultrasonik ke pin D2 pada NodeMcu ESP8266
 6. Hubungkan usb dari NodeMcu ESP8266 ke laptop/PC
-7. Letakkan benda yang akan diukur pada batas modul sensor utrasonik kemudian perhatikan jarak pada serial monitor.
-8. Catat kondisi perubahan jarak
+7. Masukkan script pada Arduino IDE dan upload ke NodeMcu ESP8266
+8. Letakkan benda yang akan diukur pada batas modul sensor utrasonik kemudian perhatikan jarak pada serial monitor.
+9. Catat kondisi perubahan jarak
 
 ### E. HASIL PERCOBAAN
 
