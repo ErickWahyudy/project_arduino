@@ -112,8 +112,8 @@ void loop() {
 }
 ```
 3. Setelah mengetahui tinggi gelas kosong, kemudian isi gelas dengan sedikit air dan cari volume air dengan menggunakan sensor ultrasonic
-    3,14 x 3,5 x 3,5 = 38,46
-    luas alas gelas = 38,46
+* luas alas > 3,14 x 3,5 x 3,5 = 38,46
+* luas alas gelas = 38,46
 4. taruh sensor ultrasonic pada bagian atas gelas
 5. setelah itu cari volume air dengan memasukkan script berikut :
 ```
