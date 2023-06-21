@@ -61,10 +61,13 @@ antara sisi satu dengan sisi yang lain, misalnya dengan dilatasi antar
 
 1. Lakukan wiring pada pin I/O nodemcu dengan sensor ultrasonic.
 2. Berilah modul gerbang sensor utrasonik tegangan sebesar 9-12 VDC dengan
-3. cara menghubungkan vcc dan ground power supply ke vcc dan ground modul sensor ultarasonik menggunakan kabel penghubung yang sudah disediakan.
-4. Hubungkan pada framework ardino ide
-5. Letakkan benda yang akan diukur pada batas modul sensor utrasonik kemudian perhatikan jarak pada serial monitor.
-6. Catat kondisi perubahan jarak
+3. Sambungkan VCC pada modul sensor ultrasonik ke pin 3V pada NodeMcu ESP8266
+4. Sambungkan GND pada modul sensor ultrasonik ke pin GND pada NodeMcu ESP8266
+5. Sambungkan pin trig pada modul sensor ultrasonik ke pin D1 pada NodeMcu ESP8266
+6. Sambungkan pin echo pada modul sensor ultrasonik ke pin D2 pada NodeMcu ESP8266
+7. Hubungkan usb dari NodeMcu ESP8266 ke laptop/PC
+8. Letakkan benda yang akan diukur pada batas modul sensor utrasonik kemudian perhatikan jarak pada serial monitor.
+9. Catat kondisi perubahan jarak
 
 ### E. HASIL PERCOBAAN
 
