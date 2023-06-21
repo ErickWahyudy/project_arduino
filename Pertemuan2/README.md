@@ -157,9 +157,6 @@ void loop() {
 ```
 6. lihat pada serial monitor untuk mengetahui volume air dan lihat lampu led untuk mengetahui level volume air yang telah ditentukan misalnya : volume air 400cm3 maka led merah menyala, volume air 150cm3 maka led kuning menyala, volume air 0cm3 maka led hijau menyala
 
-<!-- menambahkan gambar dari folder hasil -->
-![hasil](/Pertemuan2/hasil/photo (1).jpeg)
-
 ### G. Hasil analisis
 1. Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
 2. Sensor ultrasonic dapat digunakan untuk mengukur volume air dengan menggunakan rumus volume air = luas alas x tinggi air
