@@ -68,16 +68,95 @@ antara sisi satu dengan sisi yang lain, misalnya dengan dilatasi antar
 
 ### E. HASIL PERCOBAAN
 
-| Masukan       | Pengukuran 1                | Pengukuran 2                | Pengukuran 3                |
-|---------------|-----------------------------|-----------------------------|-----------------------------|
-| Triplek       |                             |                             |                             |
-| Karpet        |                             |                             |                             |
-| Kardus        |                             |                             |                             |
-| Spon          |                             |                             |                             |
+| Masukan       | Pengukuran 1          | Pengukuran 2          | Pengukuran 3          | Respon waktu/jarak          |
+|---------------|-----------------------|-----------------------|-----------------------|-----------------------------|
+| Triplek       | 30cm                  |  32cm                 |  31cm                 |  1detik/30cm                |
+| Karpet        | 33cm                  |  34cm                 |  33cm                 |  1detik/30cm                |
+| Kardus        | 31cm                  |  31cm                 |  31cm                 |  1detik/30cm                |
+| Spon          | 37cm                  |  35cm                 |  36cm                 |  1detik/30cm                |
 
 Hasil Analisis ?
+1.  Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
+2.  Dengan demikian, dapat disimpulkan bahwa sensor ultrasonic dapat digunakan untuk mengukur jarak benda.
 
 ### F. EVALUASI
 
 Buatlah proses pengukuran volume air dengan parameter level tinggi,sedang,rendah melalui
 indikator 3 unit LED. Perhatikan juga ukuran luas alas dan diameter benda kerja? 
+
+###### Jawab:
+1. Percobaan dengan gelas air minum dengan ukuran jari-jari 3.5cm
+2. menyiapkan gelas kosong kemudian cari tinggi gelas kosong dengan menggunakan sensor ultrasonic
+dengan script berikut:
+```
+void loop() {
+  
+  float jarak_pantul, tinggi_gelas;
+
+  digitalWrite(trig_pin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig_pin, LOW);
+  echotime = pulseIn(echo_pin, HIGH);
+
+  jarak_pantul = (0.034 * echotime) / 2;
+
+  Serial.print("Tinggi gelas = ");
+  Serial.print(jarak_pantul);
+  Serial.println(" cm");
+  Serial.println("============");
+
+  delay(2000);
+}
+```
+3. Setelah mengetahui tinggi gelas kosong, kemudian isi gelas dengan sedikit air dan cari volume air dengan menggunakan sensor ultrasonic
+4. taruh sensor ultrasonic pada bagian atas gelas
+5. setelah itu cari volume air dengan memasukkan script berikut :
+```
+void loop() {
+  float luas_alas = 38.46;
+  float tinggi_gelas = 6.77;
+  float volume_air, tinggi_air, jarak_pantul;
+
+  digitalWrite(trig_pin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trig_pin, LOW);
+  echotime = pulseIn(echo_pin, HIGH);
+
+  jarak_pantul = (0.034 * (float)echotime) / 2;
+  tinggi_air = tinggi_gelas - jarak_pantul;
+  volume_air = luas_alas * tinggi_air;
+
+  Serial.println("Jarak permukaan air = ");
+  Serial.print(jarak_pantul);
+  Serial.println(" cm");
+  Serial.println("Tinggi air = ");
+  Serial.print(tinggi_air);
+  Serial.println(" cm");
+  Serial.println("Volume air = ");
+  Serial.print(volume_air);
+  Serial.println(" cm3");
+  Serial.println("====================================");
+
+  // Mengatur LED berdasarkan level volume air
+  if (volume_air >= 400) {
+    digitalWrite(red_led_pin, HIGH);     // LED merah menyala
+    digitalWrite(yellow_led_pin, LOW);   // LED kuning mati
+    digitalWrite(green_led_pin, LOW);    // LED hijau mati
+  } else if (volume_air >= 150 && volume_air < 400) {
+    digitalWrite(red_led_pin, LOW);      // LED merah mati
+    digitalWrite(yellow_led_pin, HIGH);  // LED kuning menyala
+    digitalWrite(green_led_pin, LOW);    // LED hijau mati
+  } else {
+    digitalWrite(red_led_pin, LOW);      // LED merah mati
+    digitalWrite(yellow_led_pin, LOW);   // LED kuning mati
+    digitalWrite(green_led_pin, HIGH);   // LED hijau menyala
+  }
+
+  delay(2000);
+}
+```
+6. lihat pada serial monitor untuk mengetahui volume air dan lihat lampu led untuk mengetahui level volume air yang telah ditentukan misalnya : volume air 400cm3 maka led merah menyala, volume air 150cm3 maka led kuning menyala, volume air 0cm3 maka led hijau menyala
+
+### G. Hasil analisis
+1. Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
+2. Sensor ultrasonic dapat digunakan untuk mengukur volume air dengan menggunakan rumus volume air = luas alas x tinggi air
