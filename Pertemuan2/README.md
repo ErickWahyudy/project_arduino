@@ -159,13 +159,6 @@ void loop() {
 
 <!-- menambahkan gambar dari folder hasil -->
 ![hasil](/Pertemuan2/hasil/photo (1).jpeg)
-![hasil](/Pertemuan2/hasil/photo (2).jpeg)
-![hasil](/Pertemuan2/hasil/photo (3).jpeg)
-![hasil](/Pertemuan2/hasil/photo (4).jpeg)
-![hasil](/Pertemuan2/hasil/photo (5).jpeg)
-![hasil](/Pertemuan2/hasil/volume air hijau.png)
-![hasil](/Pertemuan2/hasil/volume air kuning.png)
-![hasil](/Pertemuan2/hasil/volume air merah.png)
 
 ### G. Hasil analisis
 1. Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
