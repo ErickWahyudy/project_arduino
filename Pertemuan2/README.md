@@ -76,7 +76,7 @@ antara sisi satu dengan sisi yang lain, misalnya dengan dilatasi antar
 | Spon          | 37cm                  |  35cm                 |  36cm                 |  1detik/30cm                |
 
 Hasil Analisis ?
-1.  Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
+1.  Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin jauh benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
 2.  Dengan demikian, dapat disimpulkan bahwa sensor ultrasonic dapat digunakan untuk mengukur jarak benda.
 
 ### F. EVALUASI
