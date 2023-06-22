@@ -33,16 +33,17 @@ sumber. Tegangan sumber untuk sensor suhu DS18B20 adalah 3V sampai 5.5V
 
 Lakukan simulasi dengan mencelupkan sensor pada cairan yang berbeda, lakukan pengamatan dan analisis perubahan suhunya.
 
-| Jenis Cairan  | Perubahan Suhu        |
-|---------------|-----------------------|
-| Air ...       | 0°                    |
-| Air ...       | 0°                    |
-| Air ...       | 0°                    |
-| Air ...       | 0°                    |
+| Jenis Cairan          | Perubahan Suhu        |
+|-----------------------|-----------------------|
+| Air Suhu Ruang        | 25.06°                |
+| Air Dingin            | 22.69°                |
+| Tehu Pucuk            | 25.56°                |
+| Kopi Susu             | 28.13°                |
 
 Hasil Analisis ?
-1.  
-2.  
+1. Perubahan suhu yang terjadi karena adanya perbedaan suhu pada cairan yang berbeda
+2. Jika suhu cairan semakin tinggi maka nilai suhu yang terbaca semakin tinggi
+3. sehingga sensor DS1820B dapat digunakan untuk mengukur suhu pada cairan
 
 ### F. EVALUASI
 
