@@ -1,4 +1,4 @@
-//menyalakan kipas angin dengan sensor suhu
+//menyalakan kipas angin dengan sensor suhu dan lampu LED
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>

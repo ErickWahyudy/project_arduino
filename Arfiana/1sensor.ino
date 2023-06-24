@@ -1,4 +1,3 @@
-//menyalakan kipas angin dengan sensor suhu
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
@@ -14,10 +13,6 @@
 #define SENSOR_1_PIN D1
 #define SENSOR_2_PIN D2
 
-#define FAN_PIN D3 // Pin untuk kipas DC
-#define LED_1 D5 // Pin untuk LED Merah
-#define LED_2 D6 // Pin untuk LED Hijau
-
 OneWire oneWire1(SENSOR_1_PIN);
 OneWire oneWire2(SENSOR_2_PIN);
 DallasTemperature sensors1(&oneWire1);
@@ -25,9 +20,6 @@ DallasTemperature sensors2(&oneWire2);
 
 WiFiClientSecure client;
 CTBot myBot;
-
-bool fanState = false; // Variable untuk menyimpan status kipas
-bool ledState = false; // Variable untuk menyimpan status LED
 
 void setup() {
   Serial.begin(9600);
@@ -46,10 +38,6 @@ void setup() {
 
   myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD);
   myBot.setTelegramToken(BOT_TOKEN);
-
-  pinMode(FAN_PIN, OUTPUT);
-  pinMode(LED_1, OUTPUT);
-  pinMode(LED_2, OUTPUT);
 }
 
 void loop() {
@@ -73,44 +61,19 @@ void loop() {
     message = "Temperature Monitoring\n\n"
               "Sensor 1 Temperature: " + String(temperature1) + " °C\n"
               "Keterangan: Dingin";
-    fanState = false; // Matikan kipas DC
-    ledState = false; // Matikan LED
   } else if (temperature1 > 33) {
     message = "Temperature Monitoring\n\n"
               "Sensor 1 Temperature: " + String(temperature1) + " °C\n"
               "Keterangan: Panas";
-    fanState = true; // Nyalakan kipas DC
-    ledState = true; // Nyalakan LED
   }
   
   if (!message.isEmpty()) {
     sendTelegramMessage(message);
   }
 
-  controlFan(); // Panggil fungsi untuk mengontrol kipas
-  controlLED(); // Panggil fungsi untuk mengontrol LED
-
   delay(10000);
 }
 
 void sendTelegramMessage(String message) {
   myBot.sendMessage((int64_t)TELEGRAM_CHAT_ID, message);
-}
-
-void controlFan() {
-  if (fanState) {
-    digitalWrite(FAN_PIN, HIGH); // Nyalakan kipas DC
-  } else {
-    digitalWrite(FAN_PIN, LOW); // Matikan kipas DC
-  }
-}
-
-void controlLED() {
-  if (ledState) {
-    digitalWrite(LED_1, HIGH); // Nyalakan MERAH
-    digitalWrite(LED_2, LOW); // Nyalakan HIJAU
-  } else {
-    digitalWrite(LED_1, LOW); // Matikan Merah
-    digitalWrite(LED_2, HIGH); // Matikan Hijau
-  }
 }
