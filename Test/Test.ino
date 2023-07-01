@@ -35,10 +35,10 @@ void setup() {
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("Connecting to WiFi...");
+    Serial.println("Hubungkan ke WiFi...");
   }
 
-  Serial.println("Connected to WiFi");
+  Serial.println("Terhubung ke WiFi");
 
   Firebase.begin("https://kontrol-suhu-aquarium-default-rtdb.asia-southeast1.firebasedatabase.app/", "AIzaSyBfio_vnzNn8R0gBkhZJo3FoqGQJrVBiCs");
 

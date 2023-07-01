@@ -3,6 +3,7 @@
 #include <ESP8266WiFi.h>
 #include <FirebaseESP8266.h> // Library Firebase ESP8266 Client
 #include <CTBot.h>
+#include <Adafruit_SSD1306.h> // Library OLED
 
 //masukkan wifi dan password
 #define WIFI_SSID "PRODUCTION"
@@ -18,6 +19,10 @@
 #define Relay_1 D5 // Pin untuk relay
 #define Relay_2 D6 // Pin untuk relay
 
+#define OLED_ADDRESS 0x3C // Alamat I2C OLED
+#define OLED_SDA D1 // Pin SDA OLED
+#define OLED_SCL D2 // Pin SCL OLED
+
 OneWire oneWire1(SENSOR_1_PIN);
 OneWire oneWire2(SENSOR_2_PIN);
 DallasTemperature sensors1(&oneWire1);
@@ -26,6 +31,8 @@ DallasTemperature sensors2(&oneWire2);
 WiFiClientSecure client;
 FirebaseData firebaseData;
 CTBot myBot;
+
+Adafruit_SSD1306 display(128, 64, &Wire, OLED_ADDRESS);
 
 bool fanState = false; // Variable untuk menyimpan status kipas
 bool heaterState = false; // Variable untuk menyimpan status pemanas
@@ -37,10 +44,10 @@ void setup() {
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("Hubungkan ke WiFi...");
+    Serial.println("Connecting to WiFi...");
   }
 
-  Serial.println("Terhubung ke WiFi");
+  Serial.println("Connected to WiFi");
 
   Firebase.begin("https://kontrol-suhu-aquarium-default-rtdb.asia-southeast1.firebasedatabase.app/", "AIzaSyBfio_vnzNn8R0gBkhZJo3FoqGQJrVBiCs");
 
@@ -49,6 +56,11 @@ void setup() {
 
   myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD);
   myBot.setTelegramToken(BOT_TOKEN);
+
+  display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDRESS);
+  display.display();
+  delay(2000);
+  display.clearDisplay();
 
   pinMode(Relay_1, OUTPUT);
   pinMode(Relay_2, OUTPUT);
@@ -69,8 +81,22 @@ void loop() {
   Serial.print(temperature2);
   Serial.println(" °C");
 
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.println("Temperature Monitoring");
+  display.println();
+  display.print("Sensor 1: ");
+  display.print(temperature1);
+  display.println(" °C");
+  display.print("Sensor 2: ");
+  display.print(temperature2);
+  display.println(" °C");
+  display.display();
+
   String message;
-  
+
   if (temperature1 < 28) {
     message = "Temperature Monitoring\n\n"
               "Sensor 1 Temperature: " + String(temperature1) + " °C\n"
@@ -102,7 +128,7 @@ void loop() {
   Firebase.setString(firebaseData, path + "fanState", String(fanState));
   Firebase.setString(firebaseData, path + "heaterState", String(heaterState));
 
-if (firebaseData.httpCode() != FIREBASE_ERROR_HTTP_CODE_OK) {
+  if (firebaseData.httpCode() != FIREBASE_ERROR_HTTP_CODE_OK) {
     Serial.println("Firebase data set failed");
     Serial.println("HTTP response code: " + String(firebaseData.httpCode()));
     Serial.println("Reason: " + firebaseData.errorReason());
