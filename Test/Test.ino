@@ -4,11 +4,13 @@
 #include <FirebaseESP8266.h> // Library Firebase ESP8266 Client
 #include <CTBot.h>
 
+//masukkan wifi dan password
 #define WIFI_SSID "PRODUCTION"
 #define WIFI_PASSWORD "asdfghjkl"
-#define BOT_TOKEN "1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4"
 
-#define TELEGRAM_CHAT_ID 1136312864 // Ganti dengan ID chat yang valid
+//masukkan token dan chat id bot telegram
+#define BOT_TOKEN "1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4"
+#define TELEGRAM_CHAT_ID -1001939397003 // Ganti dengan ID chat yang valid
 
 #define SENSOR_1_PIN D3
 #define SENSOR_2_PIN D4
