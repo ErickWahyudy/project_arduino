@@ -16,7 +16,7 @@
 #define SENSOR_2_PIN D4
 
 #define Relay_1 D5 // Pin untuk relay
-#define Relay_2 D6 // Pin untuk relay
+#define Relay_2 D7 // Pin untuk relay
 
 OneWire oneWire1(SENSOR_1_PIN);
 OneWire oneWire2(SENSOR_2_PIN);
