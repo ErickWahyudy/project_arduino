@@ -42,7 +42,7 @@ void setup() {
 
   Serial.println("Terhubung ke WiFi");
 
-  Firebase.begin("https://kontrol-suhu-aquarium-default-rtdb.asia-southeast1.firebasedatabase.app/", "AIzaSyBfio_vnzNn8R0gBkhZJo3FoqGQJrVBiCs");
+  Firebase.begin("https://kontrol-suhu-aquarium-96904-default-rtdb.asia-southeast1.firebasedatabase.app/", "AIzaSyCc_IuorHTHeTngQ48tc_leVRuCPs0MM0A");
 
   sensors1.begin();
   sensors2.begin();
