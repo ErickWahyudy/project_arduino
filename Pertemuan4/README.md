@@ -40,6 +40,22 @@ Catat setiap kenaikan suhu yang muncul pada terminal monitor Arduino IDE, kemudi
 kecepatan perubahan suhu pada real time database google firebase. Kemudian hitung rata-rata
 kecepatan data yang terkirim pada google firebase. Gunakan quality of service (QoS).
 
+| Percobaan             | Perubahan Suhu        | Perubahan Kelembaban   |
+|-----------------------|-----------------------|------------------------|
+| Percobaan 1           | 24.20°c               | 51.30%                 |
+| Percobaan 2           | 24.20°c               | 52.00%                 |
+| Percobaan 3           | 24.20°c               | 51.40%                 |
+| Percobaan 4           | 24.30°c               | 51.40%                 |
+| Percobaan 5           | 24.40°c               | 51.20%                 |
+
+Hasil analisis data yang terkirim pada google firebase
+1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
+2. Rata-rata perubahan kelembaban yang terkirim pada google firebase adalah 51.46%
+3. Quality of service (QoS) yang digunakan adalah 0
+4. Quality of service (QoS) yang digunakan adalah 1
+5. Quality of service (QoS) yang digunakan adalah 2
+6. Quality of service (QoS) yang digunakan adalah 3
+
 ### F. EVALUASI
 
 Kembangkan coding dengan menambahkan kelembapan udara integrasikan di firebase, rubah delay
