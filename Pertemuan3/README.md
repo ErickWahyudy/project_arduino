@@ -23,20 +23,23 @@ sumber. Tegangan sumber untuk sensor suhu DS18B20 adalah 3V sampai 5.5V
 5. Sensor DS1820B
 
 ### D. LANGKAH PERCOBAAN
-1. Rangkai nodeMCU ESP8266 dengan sensor DS1820B.
+
+1. Lakukan instalasi sensor DS1820B pada Arduino IDE
+2. Inputkan coding yang telah disiapkan pada Arduino IDE
+3. Lakukan proses pengamatan.
+
 #### Langkah merangkai sensor DS1820B pada NodeMCU ESP8266
 1. Siapkan sensor DS1820B, NodeMCU ESP8266, dan kabel jumper
 2. Hubungkan kaki GND sensor DS1820B dengan kaki GND NodeMCU ESP8266 menggunakan kabel jumper
 3. Hubungkan kaki VCC sensor DS1820B dengan kaki 3V NodeMCU ESP8266 menggunakan kabel jumper
 4. Hubungkan kaki DQ sensor DS1820B dengan kaki D4 NodeMCU ESP8266 menggunakan kabel jumper
 
-
-2. Lakukan instalasi sensor DS1820B pada Arduino IDE
 #### Langkah instalasi sensor DS1820B pada Arduino IDE
 1. Buka Arduino IDE
 2. Install library OneWire dan DallasTemperature
 3. Masukkan kode program berikut pada Arduino IDE
-```void loop() {
+```
+void loop() {
   // Mendapatkan suhu dalam derajat Celsius
   sensors.requestTemperatures();
   float temperatureC = sensors.getTempCByIndex(0);
@@ -56,6 +59,7 @@ sumber. Tegangan sumber untuk sensor suhu DS18B20 adalah 3V sampai 5.5V
 4. Upload kode program tersebut ke NodeMCU ESP8266
 5. Buka Serial Monitor
 6. Amati hasil keluaran pada Serial Monitor
+
 
 ### E. HASIL PERCOBAAN
 
