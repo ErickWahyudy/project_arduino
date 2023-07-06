@@ -54,7 +54,7 @@ void loop() {
 
   sendDataToFirebase(temperatureString, humidityString); // Kirim data ke Firebase
 
-  delay(10000);
+  delay(1000);
 }
 
 void sendDataToFirebase(String temperature, String humidity) {
