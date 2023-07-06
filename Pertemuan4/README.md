@@ -71,7 +71,7 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 17. Klik `Project settings`.
 18. Kemudian klik `General`.
 19. Gulir ke bawah cari `Web API Key` dan salin `Web API Key` tersebut.
-20. Salin url database yang sudah dibuat pada menu 'Realtime Database' dan salin `databaseURL` tersebut.
+20. Salin url database yang sudah dibuat pada menu `Realtime Database` dan salin `databaseURL` tersebut.
 
 #### Langkah menghubungkan NodeMCU ESP8266 dengan firebase
 21. Buka Arduino IDE dan buka sketch `Firebase_ESP8266_DHT11`.
