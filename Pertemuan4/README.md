@@ -67,15 +67,15 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 13. Klik `Publish`.
 14. Klik `Project Overview` pada pojok kiri atas.
 15. Klik `Add Firebase to your web app`.
-16. Salin kode yang ada pada `var config` dan `firebase.initializeApp(config)`.
-17. Buka Arduino IDE dan buka sketch `Firebase_ESP8266_DHT11`.
-18. Salin kode yang sudah disalin tadi ke dalam sketch.
-19. Ubah `ssid` dan `password` sesuai dengan WiFi yang digunakan.
-20. Ubah `auth` sesuai dengan `auth key` yang sudah dibuat.
-21. Untuk mendapatkan `auth key`, klik ikon `Setting` pada pojok kanan atas.
-22. Klik `Project settings`.
-23. Kemudian klik `General`.
-24. Gulir ke bawah cari `Web API Key` dan salin `Web API Key` tersebut.
+16. Untuk mendapatkan `auth key`, klik icon `Setting` pada pojok kanan atas.
+17. Klik `Project settings`.
+18. Kemudian klik `General`.
+19. Gulir ke bawah cari `Web API Key` dan salin `Web API Key` tersebut.
+20. Salin kode yang ada pada `var config` dan `firebase.initializeApp(config)`.
+21. Buka Arduino IDE dan buka sketch `Firebase_ESP8266_DHT11`.
+22. Salin kode yang sudah disalin tadi ke dalam sketch.
+23. Ubah `ssid` dan `password` sesuai dengan WiFi yang digunakan.
+24. Ubah `auth` sesuai dengan `auth key` yang sudah dibuat.
 25. Ubah `databaseURL` sesuai dengan `databaseURL` yang sudah dibuat.
 26. Upload sketch ke NodeMCU ESP8266.
 27. Buka serial monitor.
