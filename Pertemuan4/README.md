@@ -89,14 +89,13 @@ Catat setiap kenaikan suhu yang muncul pada terminal monitor Arduino IDE, kemudi
 kecepatan perubahan suhu pada real time database google firebase. Kemudian hitung rata-rata
 kecepatan data yang terkirim pada google firebase. Gunakan quality of service (QoS).
 
-Delay time sleep yang digunakan adalah 10 detik
-| Percobaan             | Perubahan Suhu        |
-|-----------------------|-----------------------|
-| Percobaan 1           | 24.20°c               |
-| Percobaan 2           | 24.20°c               |
-| Percobaan 3           | 24.20°c               |
-| Percobaan 4           | 24.30°c               |
-| Percobaan 5           | 24.40°c               |
+| Percobaan             | Perubahan Suhu        | Delay Time Sleep       |
+|-----------------------|-----------------------|------------------------|
+| Percobaan 1           | 24.20°c               | 10 detik               |
+| Percobaan 2           | 24.20°c               | 10 detik               |
+| Percobaan 3           | 24.20°c               | 10 detik               |
+| Percobaan 4           | 24.30°c               | 10 detik               |
+| Percobaan 5           | 24.40°c               | 10 detik               |
 
 Hasil analisis data yang terkirim pada google firebase
 1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
@@ -110,14 +109,13 @@ Hasil analisis data yang terkirim pada google firebase
 Kembangkan coding dengan menambahkan kelembapan udara integrasikan di firebase, rubah delay
 time sleep sesuai instruksi instruktur.
 
-Delay time sleep yang digunakan adalah 10 detik
-| Percobaan             | Perubahan Suhu        | Perubahan Kelembaban   |
-|-----------------------|-----------------------|------------------------|
-| Percobaan 1           | 24.20°c               | 51.30%                 |
-| Percobaan 2           | 24.20°c               | 52.00%                 |
-| Percobaan 3           | 24.20°c               | 51.40%                 |
-| Percobaan 4           | 24.30°c               | 51.40%                 |
-| Percobaan 5           | 24.40°c               | 51.20%                 |
+| Percobaan             | Perubahan Suhu        | Perubahan Kelembaban   | Delay Time Sleep       |
+|-----------------------|-----------------------|------------------------|------------------------|
+| Percobaan 1           | 24.20°c               | 51.30%                 | 10 detik               |
+| Percobaan 2           | 24.20°c               | 52.00%                 | 10 detik               |
+| Percobaan 3           | 24.20°c               | 51.40%                 | 10 detik               |
+| Percobaan 4           | 24.30°c               | 51.40%                 | 10 detik               |
+| Percobaan 5           | 24.40°c               | 51.20%                 | 10 detik               |
 
 Hasil analisis data yang terkirim pada google firebase
 1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
