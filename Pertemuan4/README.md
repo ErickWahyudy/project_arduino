@@ -34,6 +34,53 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 5. Amati perubahan suhu dan data yang terkirim pada google firebase.
 6. Lakukan juga pengecekan pada library firebase jika data tidak terkirim.
 
+#### Langkah merangkai sensor DHT 11 dengan NodeMCU ESP8266
+1. Siapkan alat dan bahan yang dibutuhkan.
+2. Siapkan modul sensor DHT 11, NodeMCU ESP8266, kabel jumper, dan kabel USB.
+3. Hubungkan kabel USB ke NodeMCU ESP8266 dan laptop.
+4. Hubungkan kabel jumper ke modul sensor DHT 11 dan NodeMCU ESP8266.
+5. Hubungkan kabel jumper merah ke pin VCC pada modul sensor DHT 11 dan pin Vin pada NodeMCU ESP8266.
+6. Hubungkan kabel jumper hitam ke pin GND pada modul sensor DHT 11 dan pin GND pada NodeMCU ESP8266.
+7. Hubungkan kabel jumper kuning ke pin S pada modul sensor DHT 11 dan pin D4 pada NodeMCU ESP8266.
+
+#### Langkah membuat realtime database pada firebase
+1. Buka browser dan masuk ke website firebase.
+2. Klik menu `Go to console` pada pojok kanan atas.
+3. Klik `Add project` untuk membuat project baru.
+4. Masukkan nama project, lalu klik `Continue`.
+5. Klik `Create project`.
+6. Klik 'Authentication' pada menu Develop.
+7. Klik `Set up sign-in method`.
+8. Pilih 'anonymous', lalu klik `Enable`.
+9. Klik `Database` pada menu Develop.
+10. Klik `Create database`.
+11. Pilih `Start in test mode`, lalu klik `Enable`.
+12. Klik `Rules` dan ubah menjadi seperti berikut.
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+13. Klik `Publish`.
+14. Klik `Project Overview` pada pojok kiri atas.
+15. Klik `Add Firebase to your web app`.
+16. Salin kode yang ada pada `var config` dan `firebase.initializeApp(config)`.
+17. Buka Arduino IDE dan buka sketch `Firebase_ESP8266_DHT11`.
+18. Salin kode yang sudah disalin tadi ke dalam sketch.
+19. Ubah `ssid` dan `password` sesuai dengan WiFi yang digunakan.
+20. Ubah `auth` sesuai dengan `auth key` yang sudah dibuat.
+21. Untuk mendapatkan `auth key`, klik ikon `Setting` pada pojok kanan atas.
+22. Klik `Project settings`.
+23. Kemudian klik `General`.
+24. Gulir ke bawah cari `Web API Key` dan salin `Web API Key` tersebut.
+25. Ubah `databaseURL` sesuai dengan `databaseURL` yang sudah dibuat.
+26. Upload sketch ke NodeMCU ESP8266.
+27. Buka serial monitor.
+28. Amati perubahan suhu dan data yang terkirim pada google firebase.
+
 ### E. HASIL PERCOBAAN
 
 Catat setiap kenaikan suhu yang muncul pada terminal monitor Arduino IDE, kemudian amati
