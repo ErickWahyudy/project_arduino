@@ -51,7 +51,7 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 5. Klik `Create project`.
 6. Klik 'Authentication' pada menu Develop.
 7. Klik `Set up sign-in method`.
-8. Pilih 'anonymous', lalu klik `Enable`.
+8. Pilih `anonymous`, lalu klik `Enable'
 9. Klik `Database` pada menu Develop.
 10. Klik `Create database`.
 11. Pilih `Start in test mode`, lalu klik `Enable`.
