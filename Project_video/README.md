@@ -59,7 +59,7 @@ Ucapan testimoni dari respsionis
 
 #### Scene 13
 Ucapan testimoni dari dokter
-`kata ucapannya: "Saya dr. bambang mengucapkan terima kasih atas adanya sistem antrian berbasis web ini. karena dengan adanya sistem ini saya bisa melihat antrian yang sedang berjalan di web aplikasi, kemudian sistem ini sangat efiisien dan efektif dengan desain tampilan yang mudah dipahami oleh pengguna, semoga kedeapan sistem ini bisa dikembangkan lagi agar lebih baik lagi dan bisa membantu kami dalam mengelola antrian pasien"`
+`kata ucapannya: "Saya dr. bambang mengucapkan terima kasih atas adanya sistem antrian berbasis web ini. karena dengan adanya sistem ini saya bisa melihat antrian yang sedang berjalan di web aplikasi secara langsung, sehingga saya bisa mempersiapkan diri untuk melayani pasien yang akan diperiksa. Semoga sistem antrian ini bisa membantu klinik kami dalam mengelola antrian pasien secara efektif dan efisien sehingga pasien merasa nyaman dan puas dengan pelayanan kami dan semoga sistem ini juga bisa diterapkan di klinik lainnya"`
 
 #### Scene 14
 video penutup
