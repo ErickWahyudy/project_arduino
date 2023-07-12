@@ -8,7 +8,8 @@ Web aplikasi ini diharapkan dapat membantu klinik dalam mengelola antrian pasien
 video drone yang mengambil video dari atas klinik, kemudian video berlanjut ke tulisan nama klinik
 
 #### Scene 1
-Dewi melakukan pendaftaran pada web aplikasi `jangan lupa di screen record`
+Dewi melakukan pendaftaran pada web aplikasi
+(jangan lupa screen record web aplikasi yang menunjukkan proses pendaftaran)
 
 #### Scene 2
 Dewi parkir motor di parkiran klinik
@@ -29,6 +30,7 @@ Dewi menunggu antrian di ruang tunggu bersama rani / pasien lain
 #### Scene 6
 Sambil menunggu antrian, dewi membuka web aplikasi dan melihat antrian yang sedang berjalan
 (shoot saat dewi membuka web aplikasi)
+(screen record web aplikasi yang menunjukkan antrian yang sedang berjalan)
 
 #### Scene 7
 Dewi masuk ke ruangan
