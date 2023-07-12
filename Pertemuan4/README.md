@@ -99,10 +99,7 @@ kecepatan data yang terkirim pada google firebase. Gunakan quality of service (Q
 
 Hasil analisis data yang terkirim pada google firebase
 1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
-3. Quality of service (QoS) yang digunakan adalah 0
-4. Quality of service (QoS) yang digunakan adalah 1
-5. Quality of service (QoS) yang digunakan adalah 2
-6. Quality of service (QoS) yang digunakan adalah 3
+3. Kecepatan perubahan suhu yang terkirim pada google firebase adalah 0.04°c/detik
 
 ### F. EVALUASI
 
@@ -120,7 +117,4 @@ time sleep sesuai instruksi instruktur.
 Hasil analisis data yang terkirim pada google firebase
 1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
 2. Rata-rata perubahan kelembaban yang terkirim pada google firebase adalah 51.46%
-3. Quality of service (QoS) yang digunakan adalah 0
-4. Quality of service (QoS) yang digunakan adalah 1
-5. Quality of service (QoS) yang digunakan adalah 2
-6. Quality of service (QoS) yang digunakan adalah 3
+3. Kecepatan perubahan suhu yang terkirim pada google firebase adalah 0.04°c/detik
