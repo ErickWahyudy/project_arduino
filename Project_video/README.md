@@ -1,8 +1,8 @@
 # Script video klinik dr. bambang
 
 ## Deskripsi
-Sistem Antrian Periksa Dokter merupakan aplikasi berbasis web yang digunakan untuk memudahkan pasien dalam melakukan pendaftaran antrian periksa dokter. Sistem ini dibuat dengan menggunakan bahasa pemrograman PHP dengan framework Codeigniter dan database MySQL. Sistem ini terdiri dari 3 level pengguna yaitu admin, dokter dan pasien. Admin bertugas untuk mengelola data dokter dan pasien, dokter bertugas untuk melihat data antrian yang sedang berjalan dan pasien bertugas untuk mendaftar antrian periksa dokter.
-
+Sistem Antrian Periksa Dokter merupakan aplikasi berbasis web yang digunakan untuk memudahkan pasien dalam melakukan pendaftaran antrian periksa dokter. Sistem ini dibuat dengan menggunakan bahasa pemrograman PHP dengan framework Codeigniter dan database MySQL. Sistem ini terdiri dari 3 level pengguna yaitu admin, dokter dan pasien. Admin bertugas untuk mengelola data dokter dan pasien serta mengelola antrian pasien. Dokter bertugas untuk memantau antrian pasien. Pasien bertugas untuk mendaftar antrian periksa dokter dan melihat antriannya di web aplikasi secara real time.
+Web aplikasi ini diharapkan dapat membantu klinik dalam mengelola antrian pasien secara efektif dan efisien sehingga pasien merasa nyaman dan puas dengan pelayanan klinik.
 
 #### Opening video
 video drone yang mengambil video dari atas klinik, kemudian video berlanjut ke tulisan nama klinik
