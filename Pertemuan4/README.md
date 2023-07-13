@@ -39,7 +39,7 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 2. Siapkan modul sensor DHT 11, NodeMCU ESP8266, kabel jumper, dan kabel USB.
 3. Hubungkan kabel USB ke NodeMCU ESP8266 dan laptop.
 4. Hubungkan kabel jumper ke modul sensor DHT 11 dan NodeMCU ESP8266.
-5. Hubungkan kabel jumper merah ke pin VCC pada modul sensor DHT 11 dan pin Vin pada NodeMCU ESP8266.
+5. Hubungkan kabel jumper merah ke pin VCC pada modul sensor DHT 11 dan pin 5V pada NodeMCU ESP8266.
 6. Hubungkan kabel jumper hitam ke pin GND pada modul sensor DHT 11 dan pin GND pada NodeMCU ESP8266.
 7. Hubungkan kabel jumper kuning ke pin S pada modul sensor DHT 11 dan pin D4 pada NodeMCU ESP8266.
 
@@ -75,7 +75,7 @@ memiliki output tegangan analog yang dapat diolah lebih lanjut menggunakan mikro
 
 #### Langkah menghubungkan NodeMCU ESP8266 dengan firebase
 21. Buka Arduino IDE dan buka sketch `Firebase_ESP8266_DHT11`.
-22. Salin kode yang sudah disalin tadi ke dalam sketch.
+22. Masukkan kode program.
 23. Ubah `ssid` dan `password` sesuai dengan WiFi yang digunakan.
 24. Ubah `auth` sesuai dengan `auth key` yang sudah dibuat.
 25. Ubah `databaseURL` sesuai dengan `databaseURL` yang sudah dibuat.
