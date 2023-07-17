@@ -15,7 +15,7 @@ logam ferromagnetis.
 
 ### C. ALAT DAN BAHAN
 
-1. Modul trainer Sensor DHT 11, Sensor Ultrasonic HRS04
+1. Modul trainer Sensor DHT 11, Relay, LED
 2. NodeMcu ESP 8266
 3. Kabel Jumper
 4. Catu daya 5V
