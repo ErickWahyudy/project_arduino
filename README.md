@@ -35,10 +35,9 @@ praktikum.
 Berikut adalah langkah-langkah untuk menginstal proyek ini:
 | Langkah       | Perintah                    |
 |---------------|-----------------------------|
-| Langkah 1     | `https://github.com/ErickWahyudy/project_arduino.git` |
-| Langkah 2     | `cd proyek`                 |
-| Langkah 3     | `npm install`               |
-| Langkah 4     | `npm start`                 |
+| Langkah 1     | copy url `https://github.com/ErickWahyudy/project_arduino.git` |
+| Langkah 2     | lakukan clone pada git bash |
+| Langkah 3     | buka folder project_arduino |
 
 
 ## Penggunaan
