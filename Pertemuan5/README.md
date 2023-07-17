@@ -55,6 +55,7 @@ Jawaban hasil analisis
 5. Fungsi dari delay time sleep pada proses otomasi adalah untuk menunda waktu.
 6. Fungsi dari sensor DHT 11 pada proses otomasi adalah untuk mengukur suhu dan kelembaban.
 7. Fungsi dari LED pada proses otomasi adalah untuk menampilkan indikator.
+8. Relay akan menyala jika suhu yang terbaca oleh sensor DHT 11 lebih dari 30°c.
 
 ### F. EVALUASI
 
