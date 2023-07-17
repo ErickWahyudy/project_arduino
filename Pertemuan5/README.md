@@ -23,8 +23,17 @@ logam ferromagnetis.
 
 ### D. LANGKAH PERCOBAAN
 
-1. Lakukan wiring pada pin I/O dengan sensor dan relay.  Hubungkan akuator pada relay.  Inputkan coding yang telah disiapkan pada Arduino IDE
-2. Lakukan proses pengamatan.
+1. Lakukan wiring pada pin I/O dengan sensor dan relay. 
+2. Berilah modul gerbang sensor DHT 11 tegangan sebesar 5 VDC dengan cara menghubungkan vin dan ground nodemcu, ke vcc dan ground modul sensor DHT 11 menggunakan kabel penghubung yang sudah disediakan.
+3. Hubungkan kabel jumper merah ke pin VCC pada modul sensor DHT 11 dan pin 5V pada NodeMCU ESP8266.
+4. Hubungkan kabel jumper hitam ke pin GND pada modul sensor DHT 11 dan pin GND pada NodeMCU ESP8266.
+5. Hubungkan kabel jumper kuning ke pin S pada modul sensor DHT 11 dan pin D4 pada NodeMCU ESP8266.
+6. Hubungkan arduino ke laptop menggunakan kabel USB.
+7. Buka Arduino IDE, lalu buka file `relay_dht11.ino`.
+8. Pilih board `NodeMCU 1.0 (ESP-12E Module)`.
+9. Pilih port `COM3 (Arduino/Genuino Uno)`.
+10. Klik `Upload` untuk mengunggah program ke NodeMCU ESP8266.
+11. Amati perubahan suhu dan data yang terkirim pada google firebase.
 
 ### E. HASIL PERCOBAAN
 
