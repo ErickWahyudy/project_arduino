@@ -30,6 +30,36 @@ logam ferromagnetis.
 
 Buat hasil analisis pengamatan dalam bentuk laporan singkat
 
+| Percobaan             | Perubahan Suhu        | Delay Time Sleep      | Kondisi Relay         |
+|-----------------------|-----------------------|-----------------------|-----------------------|
+| Percobaan 1           | 28.20°c               | 2 detik               | Relay OFF             |
+| Percobaan 2           | 28.20°c               | 2 detik               | Relay OFF             |
+| Percobaan 3           | 27.90°c               | 2 detik               | Relay OFF             |
+| Percobaan 4           | 27.90°c               | 2 detik               | Relay OFF             |
+| Percobaan 5           | 27.80°c               | 2 detik               | Relay OFF             |
+
+Jawaban hasil analisis
+1. Hasil pengamatan pada tabel diatas adalah suhu yang terbaca oleh sensor DHT 11.
+2. Hasil analisis yang didapat dari pengamatan diatas adalah suhu yang terbaca oleh sensor DHT 11.
+3. Fungsi dari relay pada proses otomasi adalah untuk menghubungkan dan memutuskan arus listrik.
+4. Fungsi dari akuator pada proses otomasi adalah untuk menggerakkan sesuatu.
+5. Fungsi dari delay time sleep pada proses otomasi adalah untuk menunda waktu.
+6. Fungsi dari sensor DHT 11 pada proses otomasi adalah untuk mengukur suhu dan kelembaban.
+7. Fungsi dari LED pada proses otomasi adalah untuk menampilkan indikator.
+
 ### F. EVALUASI
 
 Buat simulasi dan kembangkan coding agar terhubung dengan real time database google firebase
+Hasil simulasi dan coding yang telah dikembangkan
+
+Jawaban hasil analisis
+1. Hasil pengamatan pada tabel diatas adalah suhu yang terbaca oleh sensor DHT 11.
+2. Hasil analisis yang didapat dari pengamatan diatas adalah suhu yang terbaca oleh sensor DHT 11.
+3. Fungsi dari relay pada proses otomasi adalah untuk menghubungkan dan memutuskan arus listrik.
+4. Fungsi dari akuator pada proses otomasi adalah untuk menggerakkan sesuatu.
+5. Fungsi dari delay time sleep pada proses otomasi adalah untuk menunda waktu.
+6. Fungsi dari sensor DHT 11 pada proses otomasi adalah untuk mengukur suhu dan kelembaban.
+7. Fungsi dari LED pada proses otomasi adalah untuk menampilkan indikator.
+8. Fungsi dari firebase pada proses otomasi adalah untuk menghubungkan data dari sensor DHT 11 ke database.
+9. Firebase adalah suatu layanan dari Google untuk memberikan kemudahan bahkan mempermudah para developer aplikasi dalam mengembangkan aplikasinya.
+10. Dengan firebase, apps developer bisa fokus dalam mengembangkan aplikasi tanpa memberikan effort yang besar untuk urusan backend.
