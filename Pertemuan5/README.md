@@ -12,6 +12,16 @@ adalah komponen listrik yang bekerja berdasarkan prinsip induksi medan elektroma
 sebuah penghantar dialiri oleh arus listrik, maka di sekitar penghantar tersebut timbul medan
 magnet. Medan magnet yang dihasilkan oleh arus listrik tersebut selanjutnya diinduksikan ke
 logam ferromagnetis.
+Pada dasarnya, Relay terdiri dari 4 komponen dasar yaitu :
+1. Electromagnet (Coil)
+2. Armature
+3. Switch Contact Point (Saklar)
+4. Spring
+Kontak Poin (Contact Point) Relay terdiri dari 2 jenis yaitu :
+ > Normally Close (NC) yaitu kondisi awal sebelum diaktifkan akan selalu berada di posisi
+CLOSE (tertutup)
+Normally Open (NO) yaitu kondisi awal sebelum diaktifkan akan selalu berada di posisi OPEN
+(terbuka)
 
 ### C. ALAT DAN BAHAN
 
