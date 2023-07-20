@@ -14,8 +14,7 @@ pada Multivibrator tersebut adalah stabil dan hanya akan mengubah situasi tingka
 keluarannya saat dipicu (trigger).
 
 ##### Flip-flop mempunyai dua Output (Keluaran) yang salah satu outputnya merupakan komplemen Output yang lain.
-1. JK Flip-flop ( Master slave JK Flip-flop )
-
+###### 1. JK Flip-flop ( Master slave JK Flip-flop )
 JK Flip-flop adalah tidak adanya kondisi terlarang atau yang berarti di beri berapapun inputan
 asalkan terdapat clock maka akan terjadi perubahan pada keluarannya / outputnya
 
