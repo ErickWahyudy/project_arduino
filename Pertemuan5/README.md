@@ -17,7 +17,8 @@ Pada dasarnya, Relay terdiri dari 4 komponen dasar yaitu :
 2. Armature
 3. Switch Contact Point (Saklar)
 4. Spring
-Kontak Poin (Contact Point) Relay terdiri dari 2 jenis yaitu :
+
+##### Kontak Poin (Contact Point) Relay terdiri dari 2 jenis yaitu :
 * Normally Close (NC) yaitu kondisi awal sebelum diaktifkan akan selalu berada di posisi
 CLOSE (tertutup)
 Normally Open (NO) yaitu kondisi awal sebelum diaktifkan akan selalu berada di posisi OPEN
