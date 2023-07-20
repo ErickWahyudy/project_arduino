@@ -30,7 +30,6 @@ dari Flip-Flop adalah bahwa sistem ini dapat menempati salah satu dari dua keada
 stabil I diperoleh saat Q =1 dan Q not = 0, stabil ke II diperoleh saat Q=0 dan Q not .
 
 
-
 ### C. ALAT DAN BAHAN
 
 1. Modul trainer NodeMcu ESP 8266
