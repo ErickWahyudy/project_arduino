@@ -18,8 +18,7 @@ keluarannya saat dipicu (trigger).
 JK Flip-flop adalah tidak adanya kondisi terlarang atau yang berarti di beri berapapun inputan
 asalkan terdapat clock maka akan terjadi perubahan pada keluarannya / outputnya
 
-2. RS Flip-Flop
-
+###### 2. RS Flip-Flop
 RS FF ini adalah dasar dari semua Flip-flop yang memiliki 2 gerbang inputan / masukan yaitu R
 dan S. R artinya “RESET” dan S artinya “SET”. Flip-flop yang satu ini mempunyai 2 keluaran /
 outputyaitu Q dan Q`. Bila S diberi logika 1 dan R diberi logika 0, maka output Q akan berada
