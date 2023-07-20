@@ -77,6 +77,7 @@ Hasil Analisis ?
 2. Jika suhu cairan semakin tinggi maka nilai suhu yang terbaca semakin tinggi
 3. sehingga sensor DS1820B dapat digunakan untuk mengukur suhu pada cairan
 
-### F. EVALUASI
+### Kesimpulan
+1. Sensor DS1820B dapat digunakan untuk mengukur suhu pada cairan
+2. Semakin tinggi suhu cairan maka nilai suhu yang terbaca semakin tinggi
 
-Silahkan menghubungi instruktur untuk tugas pertemuan berikutnya.

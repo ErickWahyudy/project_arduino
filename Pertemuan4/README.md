@@ -118,3 +118,7 @@ Hasil analisis data yang terkirim pada google firebase
 1. Rata-rata perubahan suhu yang terkirim pada google firebase adalah 24.26°c
 2. Rata-rata perubahan kelembaban yang terkirim pada google firebase adalah 51.46%
 3. Kecepatan perubahan suhu yang terkirim pada google firebase adalah 0.04°c/detik
+
+### Kesimpulan
+1. Dari hasil percobaan diatas, dapat disimpulkan bahwa perubah suhu dan kelembaban yang terkirim pada google firebase adalah 24.26°c dan 51.46%
+2. Dengan demikian, dapat disimpulkan bahwa sensor DHT 11 dapat digunakan untuk mengukur suhu dan kelembaban.

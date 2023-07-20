@@ -166,3 +166,7 @@ void loop() {
 ### G. Hasil analisis
 1. Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
 2. Sensor ultrasonic dapat digunakan untuk mengukur volume air dengan menggunakan rumus volume air = luas alas x tinggi air
+
+### Kesimpulan
+1. Dari hasil percobaan diatas, dapat disimpulkan bahwa semakin tinggi benda yang diukur maka semakin lama respon waktu yang dibutuhkan oleh sensor ultrasonic untuk mengukur jarak benda tersebut.
+2. Dengan demikian, dapat disimpulkan bahwa sensor ultrasonic dapat digunakan untuk mengukur jarak benda.

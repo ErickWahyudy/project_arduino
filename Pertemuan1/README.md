@@ -50,3 +50,7 @@ Buat hasil analisis pengamatan flip flop dalam bentuk laporan singkat
 
 Modifikasi coding dengan membuat flip flop berdasarkan gerbang logika AND, OR, XOR, dengan
 menyertakan pseudocode algoritma
+
+### Kesimpulan
+1. Flip flop adalah suatu rangkaian elektronika yang memiliki dua kondisi stabil dan dapat digunakan
+untuk menyimpan informasi.
