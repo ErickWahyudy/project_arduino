@@ -1,22 +1,38 @@
-#include <DHT.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
 #include <ESP8266WiFi.h>
-#include <FirebaseESP8266.h>
+#include <FirebaseESP8266.h> // Library Firebase ESP8266 Client
+#include <CTBot.h>
 
+//masukkan wifi dan password
 #define WIFI_SSID "PRODUCTION"
 #define WIFI_PASSWORD "asdfghjkl"
 
-#define DHT_PIN D3
-#define RELAY_PIN D4
+//masukkan token dan chat id bot telegram
+#define BOT_TOKEN "1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4"
+#define TELEGRAM_CHAT_ID -1001939397003 // Ganti dengan ID chat yang valid
 
-DHT dht(DHT_PIN, DHT22);
+#define SENSOR_1_PIN D3
+#define SENSOR_2_PIN D4
+
+#define Relay_1 D5 // Pin untuk relay
+#define Relay_2 D7 // Pin untuk relay
+
+OneWire oneWire1(SENSOR_1_PIN);
+OneWire oneWire2(SENSOR_2_PIN);
+DallasTemperature sensors1(&oneWire1);
+DallasTemperature sensors2(&oneWire2);
+
+WiFiClientSecure client;
 FirebaseData firebaseData;
+CTBot myBot;
+
+bool fanState = false; // Variable untuk menyimpan status kipas
+bool heaterState = false; // Variable untuk menyimpan status pemanas
 
 void setup() {
   Serial.begin(9600);
   delay(10);
-
-  pinMode(RELAY_PIN, OUTPUT);
-  digitalWrite(RELAY_PIN, LOW); // Relay dimatikan saat awal
 
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
@@ -26,54 +42,91 @@ void setup() {
 
   Serial.println("Terhubung ke WiFi");
 
-  Firebase.begin("https://sensor-dht22-a067c-default-rtdb.asia-southeast1.firebasedatabase.app/",
-                 "AIzaSyDaFbMLuj1kDMFbDrrWE1ZMFNDFwmyj9PM");
+  Firebase.begin("https://suhu-aquarium-default-rtdb.asia-southeast1.firebasedatabase.app/", "AIzaSyDIIIwWkLBBk7HYMyATDDrj9cB-hrZXyK4");
 
-  dht.begin();
+  sensors1.begin();
+  sensors2.begin();
+
+  myBot.wifiConnect(WIFI_SSID, WIFI_PASSWORD);
+  myBot.setTelegramToken(BOT_TOKEN);
+
+  pinMode(Relay_1, OUTPUT);
+  pinMode(Relay_2, OUTPUT);
 }
 
 void loop() {
-  float temperature = dht.readTemperature();
-  float humidity = dht.readHumidity();
+  sensors1.requestTemperatures();
+  sensors2.requestTemperatures();
 
-  if (isnan(temperature) || isnan(humidity)) {
-    Serial.println("Gagal membaca suhu dan kelembaban");
-    sendDataToFirebase(-999, -999, false); // Nilai -999 menunjukkan bahwa data tidak valid
-    return;
-  }
+  float temperature1 = sensors1.getTempCByIndex(0);
+  float temperature2 = sensors2.getTempCByIndex(0);
 
-  Serial.print("Suhu: ");
-  Serial.print(temperature);
+  Serial.print("Sensor 1 Temperature: ");
+  Serial.print(temperature1);
   Serial.println(" °C");
 
-  Serial.print("Kelembaban: ");
-  Serial.print(humidity);
-  Serial.println(" %");
+  Serial.print("Sensor 2 Temperature: ");
+  Serial.print(temperature2);
+  Serial.println(" °C");
 
-  // Kondisi untuk menghidupkan atau mematikan relay berdasarkan suhu
-  bool relayStatus = false;
-  if (temperature >= 30.0) {
-    digitalWrite(RELAY_PIN, HIGH); // Menghidupkan relay jika suhu lebih besar atau sama dengan 30°C
-    relayStatus = true;
-  } else {
-    digitalWrite(RELAY_PIN, LOW); // Mematikan relay jika suhu kurang dari 30°C
-    relayStatus = false;
+  String message;
+  
+  if (temperature1 < 28) {
+    message = "Temperature Monitoring\n\n"
+              "Sensor 1 Temperature: " + String(temperature1) + " °C\n"
+              "Sensor 2 Temperature: " + String(temperature2) + " °C\n"
+              "Keterangan: Dingin";
+    heaterState = true; // Nyalakan pemanas
+  } else if (temperature1 > 28 && temperature1 < 33) {
+    fanState    = false; // Matikan kipas angin
+    heaterState = false; // Matikan pemanas
+  } else if (temperature1 > 33) {
+    message = "Temperature Monitoring\n\n"
+              "Sensor 1 Temperature: " + String(temperature1) + " °C\n"
+              "Sensor 2 Temperature: " + String(temperature2) + " °C\n"
+              "Keterangan: Panas";
+    fanState = true; // Nyalakan kipas angin
   }
 
-  sendDataToFirebase(temperature, humidity, relayStatus);
+  if (!message.isEmpty()) {
+    sendTelegramMessage(message); // Kirim pesan ke Telegram
+  }
 
-  delay(2000); // Beri jeda 2 detik sebelum membaca suhu lagi
-}
+  controlFan(); // Panggil fungsi untuk mengontrol kipas angin
+  controlHeater(); // Panggil fungsi untuk mengontrol pemanas
 
-void sendDataToFirebase(float temperature, float humidity, bool relayStatus) {
+  // Kirim data ke Firebase
   String path = "/";
-  Firebase.setFloat(firebaseData, path + "Suhu", temperature);
-  Firebase.setFloat(firebaseData, path + "Kelembaban", humidity);
-  Firebase.setBool(firebaseData, path + "RelayStatus", relayStatus);
+  Firebase.setString(firebaseData, path + "temperature1", String(temperature1));
+  Firebase.setString(firebaseData, path + "temperature2", String(temperature2));
+  Firebase.setString(firebaseData, path + "fanState", String(fanState));
+  Firebase.setString(firebaseData, path + "heaterState", String(heaterState));
 
-  if (firebaseData.httpCode() != FIREBASE_ERROR_HTTP_CODE_OK) {
+if (firebaseData.httpCode() != FIREBASE_ERROR_HTTP_CODE_OK) {
     Serial.println("Firebase data set failed");
     Serial.println("HTTP response code: " + String(firebaseData.httpCode()));
     Serial.println("Reason: " + firebaseData.errorReason());
+  }
+
+  delay(10000);
+}
+
+void sendTelegramMessage(String message) {
+  myBot.sendMessage(TELEGRAM_CHAT_ID, message);
+}
+
+void controlFan() {
+  if (fanState) {
+    digitalWrite(Relay_1, LOW); // Matikan relay (mematikan relay kipas angin)
+  } else {
+    digitalWrite(Relay_1, HIGH); // Nyalakan relay (nyalakan relay kipas angin)
+  }
+}
+
+void controlHeater() {
+  if (heaterState) {
+    digitalWrite(Relay_2, LOW); // Matikan relay (mematikan relay pemanas)
+  } else {
+    digitalWrite(Relay_2, HIGH); // Nyalakan relay (nyalakan relay pemanas)
   }
 }
