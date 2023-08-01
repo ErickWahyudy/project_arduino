@@ -80,7 +80,7 @@ void loop()
     String message;
 
     // Logika perbandingan suhu berdasarkan rata-rata
-    if (averageTemperature < 28)
+    if (averageTemperature < 25)
     {
         message = "Suhu Monitoring\n\n"
                   "Sensor 1 Suhu: " + String(temperature1) + " °C\n"
@@ -89,12 +89,12 @@ void loop()
                   "Keterangan: Dingin";
         heaterState = true; // Nyalakan pemanas
     }
-    else if (averageTemperature >= 28 && averageTemperature <= 33)
+    else if (averageTemperature >= 25 && averageTemperature <= 30)
     {
         fanState = false;   // Matikan kipas angin
         heaterState = false; // Matikan pemanas
     }
-    else if (averageTemperature > 33)
+    else if (averageTemperature > 30)
     {
         message = "Suhu Monitoring\n\n"
                   "Sensor 1 Suhu: " + String(temperature1) + " °C\n"
